@@ -144,3 +144,8 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 For a detailed breakdown of the .tf files and input variables, please refer to the Terraform https://github.com/paripuranam/Secure-Web-Application-Deployment-using-AWS/blob/main/terraform/README.md located inside the terraform folder.
+
+---
+
+## 9. Manual Deployment via AWS
+For a detailed breakdown of manual deployment, please refer to the Manual deployment https://github.com/paripuranam/Secure-Web-Application-Deployment-using-AWS/blob/main/Manual_deployment/MANUAL_DEPLOYMENT.md located inside the Manual_deployment folder.
