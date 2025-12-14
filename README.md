@@ -48,7 +48,7 @@ The network is divided into public and private tiers to minimize the attack surf
 The "Front Door" of the application handles DNS, security filtering, and traffic distribution before requests ever touch an application server.
 
 ### Step 1: DNS Resolution (Route 53)
-**Amazon Route 53** acts as the highly available DNS service. It translates the user's friendly domain name (e.g., `www.myapp.com`) into the DNS name of the Application Load Balancer.
+**Amazon Route 53** acts as the highly available DNS service. It translates the user's friendly domain name (e.g., `yourdomain.com`) into the DNS name of the Application Load Balancer.
 
 ### Step 2: Edge Security (AWS WAF)
 Before reaching the load balancer, traffic is inspected by the **AWS Web Application Firewall (WAF)**.
