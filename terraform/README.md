@@ -48,7 +48,7 @@ This Terraform configuration deploys the following resources:
 ### 1\. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/aws-terraform-3tier.git
+[git clone https://github.com/paripuranam/Secure-Web-Application-Deployment-using-AWS.git
 cd aws-terraform-3tier
 ```
 
