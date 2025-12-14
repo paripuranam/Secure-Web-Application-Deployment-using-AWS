@@ -66,7 +66,7 @@ aws_region    = "us-east-1"
 
 # Your personal Public IP (CIDR format) for secure SSH access
 # You can find this by searching "what is my ip" on Google
-my_ip_address = "203.0.113.50/32"
+my_ip_address = "YOUR_PUBLIC_IP"
 
 # Database Credentials
 db_username   = "adminuser"
@@ -74,7 +74,7 @@ db_password   = "ChangeThisToAStrongPassword123!"
 
 # Route 53 Configuration
 # Ensure this domain exists in your Route 53 Hosted Zones
-domain_name   = "example.com."
+domain_name   = "yourdomain.com"
 ```
 
 ### 3\. Initialize Terraform
