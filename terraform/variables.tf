@@ -45,7 +45,7 @@ variable "db_password" {
 }
 
 variable "domain_name" {
-  description = "Existing Route53 Domain Name to create the A record in (e.g., example.com)"
+  description = "Existing Route53 Domain Name to create the A record in (e.g., yourdomain.com)"
   type        = string
   # Leave blank if you don't use dns.tf
 }
