@@ -3,6 +3,9 @@ Reference architecture for a highly available, scalable, and secure three-tier w
 ---
 # Detailed AWS Scalable & Secure Web Architecture
 
+[<img width="2816" height="1536" alt="Arch-aws" src="https://github.com/user-attachments/assets/8c732b22-c32c-49e9-bcd6-8fb88f8ee866" />
+](https://github.com/paripuranam/Secure-Web-Application-Deployment-using-AWS/blob/main/Arch-aws.png)
+
 ## 1. Executive Summary
 
 This infrastructure is designed to host a mission-critical web application. It decouples the public interface from the application logic and the data storage layer. By leveraging multiple Availability Zones (AZs) and managed services like RDS and Auto Scaling, the architecture ensures that the application can sustain the loss of an entire data center or a sudden spike in user traffic without downtime.
