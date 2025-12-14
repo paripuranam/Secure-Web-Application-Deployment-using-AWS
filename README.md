@@ -112,3 +112,34 @@ While not explicitly drawn as boxes, this architecture relies heavily on **Secur
 1.  **ALB Security Group:** Allows Inbound HTTPS (443) from the Internet (`0.0.0.0/0`).
 2.  **App Tier (EC2) Security Group:** Allows Inbound HTTP (e.g., port 80 or 8080) **only** from the *ALB Security Group ID*. (It does not allow internet traffic directly).
 3.  **Data Tier (RDS) Security Group:** Allows Inbound DB traffic (e.g., port 3306 for MySQL) **only** from the *App Tier Security Group ID*.
+
+---
+
+## 8. Deployment via Terraform (Infrastructure as Code)
+This entire architecture is defined as code in the terraform/ directory. You can deploy this exact infrastructure to your AWS account in minutes using the provided Terraform scripts.
+
+Quick Start Guide
+1. Navigate to the Terraform Directory:
+
+```
+cd terraform
+```
+2. Configure Secrets: Create a terraform.tfvars file (do not commit this) to set your sensitive variables:
+```
+# terraform.tfvars
+aws_region    = "us-east-1"
+my_ip_address = "YOUR_PUBLIC_IP/32" # For Bastion SSH access
+db_password   = "YourStrongPassword!"
+Initialize and Deploy:
+```
+```
+# Initialize the working directory
+terraform init
+
+# Preview the changes
+terraform plan -out=tfplan
+
+# Apply the changes to AWS
+terraform apply tfplan
+```
+For a detailed breakdown of the .tf files and input variables, please refer to the Terraform https://github.com/paripuranam/Secure-Web-Application-Deployment-using-AWS/blob/main/terraform/README.md located inside the terraform folder.
