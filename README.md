@@ -129,9 +129,10 @@ cd terraform
 # terraform.tfvars
 aws_region    = "us-east-1"
 my_ip_address = "YOUR_PUBLIC_IP/32" # For Bastion SSH access
-db_password   = "YourStrongPassword!"
-Initialize and Deploy:
+db_password   = "StrongPassword!"
 ```
+3. Initialize and Deploy:
+
 ```
 # Initialize the working directory
 terraform init
