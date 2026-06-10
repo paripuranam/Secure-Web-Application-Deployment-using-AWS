@@ -1,0 +1,32 @@
+{
+  "Name": "BlockDestructiveMethods",
+  "Priority": 2,
+  "Action": { "Block": {} },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "BlockDestructiveMethods"
+  },
+  "Statement": {
+    "OrStatement": {
+      "Statements": [
+        {
+          "ByteMatchStatement": {
+            "SearchString": "DELETE",
+            "FieldToMatch": { "Method": {} },
+            "TextTransformations": [{ "Priority": 0, "Type": "NONE" }],
+            "PositionalConstraint": "EXACTLY"
+          }
+        },
+        {
+          "ByteMatchStatement": {
+            "SearchString": "PUT",
+            "FieldToMatch": { "Method": {} },
+            "TextTransformations": [{ "Priority": 0, "Type": "NONE" }],
+            "PositionalConstraint": "EXACTLY"
+          }
+        }
+      ]
+    }
+  }
+}
