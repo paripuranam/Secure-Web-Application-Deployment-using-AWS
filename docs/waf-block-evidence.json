@@ -6,7 +6,7 @@
   "terminatingRuleType": "REGULAR",
   "action": "BLOCK",
   "httpRequest": {
-    "clientIp": "14.195.33.10",
+    "clientIp": "14.85.37.18",
     "country": "IN",
     "headers": [
       { "name": "host", "value": "paripoornam.tech" },
