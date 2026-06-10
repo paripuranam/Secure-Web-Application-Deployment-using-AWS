@@ -1,0 +1,20 @@
+{
+  "timestamp": 1732538254916,
+  "formatVersion": 1,
+  "webaclId": "arn:aws:wafv2:us-east-1:597088055515:regional/webacl/App-waf/20cb0f84-e023-450c-8e01-fd3685455711",
+  "terminatingRuleId": "blocked_DELETE_PUT",
+  "terminatingRuleType": "REGULAR",
+  "action": "BLOCK",
+  "httpRequest": {
+    "clientIp": "14.195.33.10",
+    "country": "IN",
+    "headers": [
+      { "name": "host", "value": "paripoornam.tech" },
+      { "name": "user-agent", "value": "curl/8.8.0" }
+    ],
+    "uri": "/",
+    "httpVersion": "HTTP/2.0",
+    "httpMethod": "DELETE"
+  },
+  "note": "Real production WAF log — DELETE request blocked by http-method rule"
+}
