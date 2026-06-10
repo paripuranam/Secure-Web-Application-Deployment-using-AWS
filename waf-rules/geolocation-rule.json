@@ -1,0 +1,19 @@
+{
+  "Name": "AllowIndiaOnly",
+  "Priority": 1,
+  "Action": { "Block": {} },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "AllowIndiaOnly"
+  },
+  "Statement": {
+    "NotStatement": {
+      "Statement": {
+        "GeoMatchStatement": {
+          "CountryCodes": ["IN"]
+        }
+      }
+    }
+  }
+}
