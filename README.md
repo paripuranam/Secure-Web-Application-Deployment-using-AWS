@@ -9,6 +9,9 @@ and full monitoring pipeline — infrastructure as code with Terraform.
 ---
 
 ## Architecture
+## Architecture
+
+```text
 Internet
 │
 ▼
@@ -19,25 +22,26 @@ AWS WAF (Web ACL)
 │
 ▼
 Application Load Balancer (HTTPS:443 only)
-│   ACM SSL Certificate (paripoornam.tech)
-│   Route 53 DNS → ALB
+│   ├── ACM SSL Certificate (paripoornam.tech)
+│   └── Route 53 DNS → ALB
 │
 ▼
 EC2 Instances (Private Subnet)
-│   Amazon Linux 2023 / t2.micro
-│   Apache httpd, no public IP
+│   ├── Amazon Linux 2023 / t2.micro
+│   ├── Apache httpd
+│   └── No public IP
 │
 ▼
 Bastion Host (Public Subnet)
-│   SSH access only from admin IP
-│   Port 22 restricted to specific CIDR
+│   ├── SSH access only from admin IP
+│   └── Port 22 restricted to specific CIDR
 │
 ▼
 Security Monitoring
-├── AWS GuardDuty    — threat detection
-├── AWS Inspector    — vulnerability scanning
-└── CloudWatch Logs  — WAF + ALB access logs
-
+├── AWS GuardDuty  — Threat detection
+├── AWS Inspector  — Vulnerability scanning
+└── CloudWatch Logs — WAF + ALB access logs
+```
 ---
 
 ## Security Design Decisions
@@ -235,6 +239,7 @@ terraform destroy -var-file="terraform.tfvars"
 ---
 
 ## Repository Structure
+```text
 ├── terraform/              Infrastructure as Code
 │   ├── main.tf             Provider, backend config
 │   ├── vpc.tf              VPC, subnets, IGW, NAT GW
@@ -250,7 +255,7 @@ terraform destroy -var-file="terraform.tfvars"
 ├── monitoring/             CloudWatch alarm definitions
 ├── docs/                   Evidence, design decisions
 └── Manual_deployment/      Step-by-step console guide
-
+```
 ---
 
 ## Skills Demonstrated
