@@ -9,7 +9,6 @@ and full monitoring pipeline — infrastructure as code with Terraform.
 ---
 
 ## Architecture
-## Architecture
 
 ```text
 Internet
