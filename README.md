@@ -268,3 +268,7 @@ terraform destroy -var-file="terraform.tfvars"
 - **Security engineering judgment** — design decisions documented with reasoning
 
 ---
+
+## Related Projects
+
+- [AWS WAF Security Validation](https://github.com/paripuranam/aws-waf-security-validation-lab)
